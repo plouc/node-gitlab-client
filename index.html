@@ -48,118 +48,66 @@
 
     <section class="readme">
         <article><h1>node-gitlab-client</h1><h2>Available operations</h2><ul>
-<li><p>builds</p>
+<li><p><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_builds.html">builds</a></p>
 <ul>
-<li><p>List project builds (getProjectBuilds)</p>
-</li>
-<li><p>List commit builds (getProjectRepositoryCommitBuilds)</p>
-</li>
-<li><p>Get a single build (getProjectBuild)</p>
-</li>
-<li><p>Get build artifacts (getProjectBuildArtifacts)</p>
-</li>
-<li><p>Cancel a build (addProjectBuildCancel)</p>
-</li>
-<li><p>Retry a build (addProjectBuildRetry)</p>
-</li>
-<li><p>Erase a build (addProjectBuildErase)</p>
-</li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_builds.html#.getProjectBuilds">List project builds</a> <code>getProjectBuilds()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_builds.html#.getProjectRepositoryCommitBuilds">List commit builds</a> <code>getProjectRepositoryCommitBuilds()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_builds.html#.getProjectBuild">Get a single build</a> <code>getProjectBuild()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_builds.html#.getProjectBuildArtifacts">Get build artifacts</a> <code>getProjectBuildArtifacts()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_builds.html#.addProjectBuildCancel">Cancel a build</a> <code>addProjectBuildCancel()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_builds.html#.addProjectBuildRetry">Retry a build</a> <code>addProjectBuildRetry()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_builds.html#.addProjectBuildErase">Erase a build</a> <code>addProjectBuildErase()</code></li>
 </ul>
 </li>
-</ul>
+<li><p><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_labels.html">labels</a></p>
 <ul>
-<li><p>labels</p>
-<ul>
-<li><p>List labels (getProjectLabels)</p>
-</li>
-<li><p>Create a new label (addProjectLabel)</p>
-</li>
-<li><p>Delete a label (deleteProjectLabels)</p>
-</li>
-<li><p>Edit an existing label (updateProjectLabels)</p>
-</li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_labels.html#.getProjectLabels">List labels</a> <code>getProjectLabels()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_labels.html#.addProjectLabel">Create a new label</a> <code>addProjectLabel()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_labels.html#.deleteProjectLabels">Delete a label</a> <code>deleteProjectLabels()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_labels.html#.updateProjectLabels">Edit an existing label</a> <code>updateProjectLabels()</code></li>
 </ul>
 </li>
-</ul>
+<li><p><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html">projects</a></p>
 <ul>
-<li><p>projects</p>
-<ul>
-<li><p>List projects (getProjects)</p>
-</li>
-<li><p>List owned projects (getProjectsOwned)</p>
-</li>
-<li><p>List starred projects (getProjectsStarred)</p>
-</li>
-<li><p>List ALL projects (getProjectsAll)</p>
-</li>
-<li><p>Get single project (getProject)</p>
-</li>
-<li><p>Get project events (getProjectEvents)</p>
-</li>
-<li><p>Create project (addProject)</p>
-</li>
-<li><p>Create project for user (addProjectsUser)</p>
-</li>
-<li><p>Edit project (updateProject)</p>
-</li>
-<li><p>Fork project (addProjectsFork)</p>
-</li>
-<li><p>Remove project (deleteProject)</p>
-</li>
-<li><p>Upload a file (addProjectUpload)</p>
-</li>
-<li><p>List project team members (getProjectMembers)</p>
-</li>
-<li><p>Get project team member (getProjectMember)</p>
-</li>
-<li><p>Add project team member (addProjectMember)</p>
-</li>
-<li><p>Edit project team member (updateProjectMember)</p>
-</li>
-<li><p>Remove project team member (deleteProjectMember)</p>
-</li>
-<li><p>Share project with group (addProjectShare)</p>
-</li>
-<li><p>List project hooks (getProjectHooks)</p>
-</li>
-<li><p>Get project hook (getProjectHook)</p>
-</li>
-<li><p>Add project hook (addProjectHook)</p>
-</li>
-<li><p>Edit project hook (updateProjectHook)</p>
-</li>
-<li><p>Delete project hook (deleteProjectHook)</p>
-</li>
-<li><p>List branches (getProjectRepositoryBranches)</p>
-</li>
-<li><p>List single branch (getProjectRepositoryBranch)</p>
-</li>
-<li><p>Protect single branch (updateProjectRepositoryBranchProtect)</p>
-</li>
-<li><p>Unprotect single branch (updateProjectRepositoryBranchUnprotect)</p>
-</li>
-<li><p>Create a forked from/to relation between existing projects. (addProjectFork)</p>
-</li>
-<li><p>Delete an existing forked from relationship (deleteProjectFork)</p>
-</li>
-<li><p>Search for projects by name (getProjectsSearch)</p>
-</li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.getProjects">List projects</a> <code>getProjects()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.getProjectsOwned">List owned projects</a> <code>getProjectsOwned()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.getProjectsStarred">List starred projects</a> <code>getProjectsStarred()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.getProjectsAll">List ALL projects</a> <code>getProjectsAll()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.getProject">Get single project</a> <code>getProject()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.getProjectEvents">Get project events</a> <code>getProjectEvents()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.addProject">Create project</a> <code>addProject()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.addProjectsUser">Create project for user</a> <code>addProjectsUser()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.updateProject">Edit project</a> <code>updateProject()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.addProjectsFork">Fork project</a> <code>addProjectsFork()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.deleteProject">Remove project</a> <code>deleteProject()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.addProjectUpload">Upload a file</a> <code>addProjectUpload()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.getProjectMembers">List project team members</a> <code>getProjectMembers()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.getProjectMember">Get project team member</a> <code>getProjectMember()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.addProjectMember">Add project team member</a> <code>addProjectMember()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.updateProjectMember">Edit project team member</a> <code>updateProjectMember()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.deleteProjectMember">Remove project team member</a> <code>deleteProjectMember()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.addProjectShare">Share project with group</a> <code>addProjectShare()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.getProjectHooks">List project hooks</a> <code>getProjectHooks()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.getProjectHook">Get project hook</a> <code>getProjectHook()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.addProjectHook">Add project hook</a> <code>addProjectHook()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.updateProjectHook">Edit project hook</a> <code>updateProjectHook()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.deleteProjectHook">Delete project hook</a> <code>deleteProjectHook()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.getProjectRepositoryBranches">List branches</a> <code>getProjectRepositoryBranches()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.getProjectRepositoryBranch">List single branch</a> <code>getProjectRepositoryBranch()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.updateProjectRepositoryBranchProtect">Protect single branch</a> <code>updateProjectRepositoryBranchProtect()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.updateProjectRepositoryBranchUnprotect">Unprotect single branch</a> <code>updateProjectRepositoryBranchUnprotect()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.addProjectFork">Create a forked from/to relation between existing projects.</a> <code>addProjectFork()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.deleteProjectFork">Delete an existing forked from relationship</a> <code>deleteProjectFork()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_projects.html#.getProjectsSearch">Search for projects by name</a> <code>getProjectsSearch()</code></li>
 </ul>
 </li>
-</ul>
+<li><p><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_tags.html">tags</a></p>
 <ul>
-<li><p>tags</p>
-<ul>
-<li><p>List project repository tags (getProjectRepositoryTags)</p>
-</li>
-<li><p>Create a new tag (addProjectRepositoryTag)</p>
-</li>
-<li><p>Delete a tag (deleteProjectRepositoryTag)</p>
-</li>
-<li><p>Create a new release (addProjectRepositoryTagRelease)</p>
-</li>
-<li><p>Update a release (updateProjectRepositoryTagRelease)</p>
-</li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_tags.html#.getProjectRepositoryTags">List project repository tags</a> <code>getProjectRepositoryTags()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_tags.html#.addProjectRepositoryTag">Create a new tag</a> <code>addProjectRepositoryTag()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_tags.html#.deleteProjectRepositoryTag">Delete a tag</a> <code>deleteProjectRepositoryTag()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_tags.html#.addProjectRepositoryTagRelease">Create a new release</a> <code>addProjectRepositoryTagRelease()</code></li>
+<li><a href="https://plouc.github.io/node-gitlab-client/gitlab-api.module_tags.html#.updateProjectRepositoryTagRelease">Update a release</a> <code>updateProjectRepositoryTagRelease()</code></li>
 </ul>
 </li>
 </ul>
@@ -190,7 +138,7 @@ labels.getProjectLabels(123)
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Mar 27 2016 17:11:26 GMT+0900 (JST) using the Minami theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Mar 27 2016 17:26:14 GMT+0900 (JST) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>
