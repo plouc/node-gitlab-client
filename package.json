@@ -1,6 +1,6 @@
 {
   "name": "gitlab-client",
-  "version": "0.1.0",
+  "version": "1.0.0-beta.0",
   "description": "Gitlab api client generated from gitlab documentation",
   "repository": {
     "type": "git",
