@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>services.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="gitlab-api.module_builds.html">builds</a><ul class='methods'><li data-type='method'><a href="gitlab-api.module_builds.html#.addProjectBuildCancel">addProjectBuildCancel</a></li><li data-type='method'><a href="gitlab-api.module_builds.html#.addProjectBuildErase">addProjectBuildErase</a></li><li data-type='method'><a href="gitlab-api.module_builds.html#.addProjectBuildRetry">addProjectBuildRetry</a></li><li data-type='method'><a href="gitlab-api.module_builds.html#.getProjectBuild">getProjectBuild</a></li><li data-type='method'><a href="gitlab-api.module_builds.html#.getProjectBuildArtifacts">getProjectBuildArtifacts</a></li><li data-type='method'><a href="gitlab-api.module_builds.html#.getProjectBuilds">getProjectBuilds</a></li><li data-type='method'><a href="gitlab-api.module_builds.html#.getProjectRepositoryCommitBuilds">getProjectRepositoryCommitBuilds</a></li></ul></li><li><a href="gitlab-api.module_labels.html">labels</a><ul class='methods'><li data-type='method'><a href="gitlab-api.module_labels.html#.addProjectLabel">addProjectLabel</a></li><li data-type='method'><a href="gitlab-api.module_labels.html#.deleteProjectLabels">deleteProjectLabels</a></li><li data-type='method'><a href="gitlab-api.module_labels.html#.getProjectLabels">getProjectLabels</a></li><li data-type='method'><a href="gitlab-api.module_labels.html#.updateProjectLabels">updateProjectLabels</a></li></ul></li><li><a href="gitlab-api.module_projects.html">projects</a><ul class='methods'><li data-type='method'><a href="gitlab-api.module_projects.html#.addProject">addProject</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.addProjectFork">addProjectFork</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.addProjectHook">addProjectHook</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.addProjectMember">addProjectMember</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.addProjectsFork">addProjectsFork</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.addProjectShare">addProjectShare</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.addProjectsUser">addProjectsUser</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.addProjectUpload">addProjectUpload</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.deleteProject">deleteProject</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.deleteProjectFork">deleteProjectFork</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.deleteProjectHook">deleteProjectHook</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.deleteProjectMember">deleteProjectMember</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProject">getProject</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectEvents">getProjectEvents</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectHook">getProjectHook</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectHooks">getProjectHooks</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectMember">getProjectMember</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectMembers">getProjectMembers</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectRepositoryBranch">getProjectRepositoryBranch</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectRepositoryBranches">getProjectRepositoryBranches</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjects">getProjects</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectsAll">getProjectsAll</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectsOwned">getProjectsOwned</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectsSearch">getProjectsSearch</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectsStarred">getProjectsStarred</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.updateProject">updateProject</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.updateProjectHook">updateProjectHook</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.updateProjectMember">updateProjectMember</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.updateProjectRepositoryBranchProtect">updateProjectRepositoryBranchProtect</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.updateProjectRepositoryBranchUnprotect">updateProjectRepositoryBranchUnprotect</a></li></ul></li><li><a href="gitlab-api.module_services.html">services</a><ul class='methods'><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesAsana">deleteProjectServicesAsana</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesAssembla">deleteProjectServicesAssembla</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesBamboo">deleteProjectServicesBamboo</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesBuildkite">deleteProjectServicesBuildkite</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesCampfire">deleteProjectServicesCampfire</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesCustom">deleteProjectServicesCustom</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesDrone">deleteProjectServicesDrone</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesEmails">deleteProjectServicesEmails</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesExternal">deleteProjectServicesExternal</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesFlowdock">deleteProjectServicesFlowdock</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesGemnasium">deleteProjectServicesGemnasium</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesGitlab">deleteProjectServicesGitlab</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesHipchat">deleteProjectServicesHipchat</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesIrker">deleteProjectServicesIrker</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesJira">deleteProjectServicesJira</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesPivotaltracker">deleteProjectServicesPivotaltracker</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesPushover">deleteProjectServicesPushover</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesRedmine">deleteProjectServicesRedmine</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesSlack">deleteProjectServicesSlack</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.deleteProjectServicesTeamcity">deleteProjectServicesTeamcity</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesAsana">getProjectServicesAsana</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesAssembla">getProjectServicesAssembla</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesBamboo">getProjectServicesBamboo</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesBuildkite">getProjectServicesBuildkite</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesCampfire">getProjectServicesCampfire</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesCustom">getProjectServicesCustom</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesDrone">getProjectServicesDrone</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesEmails">getProjectServicesEmails</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesExternal">getProjectServicesExternal</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesFlowdock">getProjectServicesFlowdock</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesGemnasium">getProjectServicesGemnasium</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesGitlab">getProjectServicesGitlab</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesHipchat">getProjectServicesHipchat</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesIrker">getProjectServicesIrker</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesJira">getProjectServicesJira</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesPivotaltracker">getProjectServicesPivotaltracker</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesPushover">getProjectServicesPushover</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesRedmine">getProjectServicesRedmine</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesSlack">getProjectServicesSlack</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.getProjectServicesTeamcity">getProjectServicesTeamcity</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesAsana">updateProjectServicesAsana</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesAssembla">updateProjectServicesAssembla</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesBamboo">updateProjectServicesBamboo</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesBuildkite">updateProjectServicesBuildkite</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesCampfire">updateProjectServicesCampfire</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesCustom">updateProjectServicesCustom</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesDrone">updateProjectServicesDrone</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesEmails">updateProjectServicesEmails</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesExternal">updateProjectServicesExternal</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesFlowdock">updateProjectServicesFlowdock</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesGemnasium">updateProjectServicesGemnasium</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesGitlab">updateProjectServicesGitlab</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesHipchat">updateProjectServicesHipchat</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesIrker">updateProjectServicesIrker</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesJira">updateProjectServicesJira</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesPivotaltracker">updateProjectServicesPivotaltracker</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesPushover">updateProjectServicesPushover</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesRedmine">updateProjectServicesRedmine</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesSlack">updateProjectServicesSlack</a></li><li data-type='method'><a href="gitlab-api.module_services.html#.updateProjectServicesTeamcity">updateProjectServicesTeamcity</a></li></ul></li><li><a href="gitlab-api.module_tags.html">tags</a><ul class='methods'><li data-type='method'><a href="gitlab-api.module_tags.html#.addProjectRepositoryTag">addProjectRepositoryTag</a></li><li data-type='method'><a href="gitlab-api.module_tags.html#.addProjectRepositoryTagRelease">addProjectRepositoryTagRelease</a></li><li data-type='method'><a href="gitlab-api.module_tags.html#.deleteProjectRepositoryTag">deleteProjectRepositoryTag</a></li><li data-type='method'><a href="gitlab-api.module_tags.html#.getProjectRepositoryTags">getProjectRepositoryTags</a></li><li data-type='method'><a href="gitlab-api.module_tags.html#.updateProjectRepositoryTagRelease">updateProjectRepositoryTagRelease</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">services.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module gitlab-api.services
+ */
+
+import { wrap }  from '../wrapper';
+import * as defs from '../definitions/services';
+
+
+/**
+ * @function updateProjectServicesAsana
+ * @static
+ * 
+ * @summary Create/Edit Asana service
+ * @description
+ *
+ * `PUT /projects/:id/services/asana`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-asana-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-asana-service|repo doc}
+ * 
+ * @param {undefined} id                         - id
+ * @param {object}    payload                    - 
+ * @param {}          payload.api_key            - (
+ * @param {}          payload.restrict_to_branch - (optional) - Comma-separated list of branches which will beautomatically inspected. Leave blank to include all branches.
+ */
+export const updateProjectServicesAsana = wrap(defs.updateProjectServicesAsana);
+
+/**
+ * @function deleteProjectServicesAsana
+ * @static
+ * 
+ * @summary Delete Asana service
+ * @description
+ *
+ * `DELETE /projects/:id/services/asana`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-asana-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-asana-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesAsana = wrap(defs.deleteProjectServicesAsana);
+
+/**
+ * @function getProjectServicesAsana
+ * @static
+ * 
+ * @summary Get Asana service settings
+ * @description
+ *
+ * `GET /projects/:id/services/asana`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-asana-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-asana-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesAsana = wrap(defs.getProjectServicesAsana);
+
+/**
+ * @function updateProjectServicesAssembla
+ * @static
+ * 
+ * @summary Create/Edit Assembla service
+ * @description
+ *
+ * `PUT /projects/:id/services/assembla`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-assembla-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-assembla-service|repo doc}
+ * 
+ * @param {undefined} id                - id
+ * @param {object}    payload           - 
+ * @param {}          payload.token     - (
+ * @param {}          payload.subdomain - (optional)
+ */
+export const updateProjectServicesAssembla = wrap(defs.updateProjectServicesAssembla);
+
+/**
+ * @function deleteProjectServicesAssembla
+ * @static
+ * 
+ * @summary Delete Assembla service
+ * @description
+ *
+ * `DELETE /projects/:id/services/assembla`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-assembla-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-assembla-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesAssembla = wrap(defs.deleteProjectServicesAssembla);
+
+/**
+ * @function getProjectServicesAssembla
+ * @static
+ * 
+ * @summary Get Assembla service settings
+ * @description
+ *
+ * `GET /projects/:id/services/assembla`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-assembla-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-assembla-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesAssembla = wrap(defs.getProjectServicesAssembla);
+
+/**
+ * @function updateProjectServicesBamboo
+ * @static
+ * 
+ * @summary Create/Edit Atlassian Bamboo CI service
+ * @description
+ *
+ * `PUT /projects/:id/services/bamboo`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-atlassian-bamboo-ci-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-atlassian-bamboo-ci-service|repo doc}
+ * 
+ * @param {undefined} id                 - id
+ * @param {object}    payload            - 
+ * @param {}          payload.bamboo_url - (
+ * @param {}          payload.build_key  - (
+ * @param {}          payload.username   - (
+ * @param {}          payload.password   - (
+ */
+export const updateProjectServicesBamboo = wrap(defs.updateProjectServicesBamboo);
+
+/**
+ * @function deleteProjectServicesBamboo
+ * @static
+ * 
+ * @summary Delete Atlassian Bamboo CI service
+ * @description
+ *
+ * `DELETE /projects/:id/services/bamboo`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-atlassian-bamboo-ci-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-atlassian-bamboo-ci-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesBamboo = wrap(defs.deleteProjectServicesBamboo);
+
+/**
+ * @function getProjectServicesBamboo
+ * @static
+ * 
+ * @summary Get Atlassian Bamboo CI service settings
+ * @description
+ *
+ * `GET /projects/:id/services/bamboo`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-atlassian-bamboo-ci-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-atlassian-bamboo-ci-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesBamboo = wrap(defs.getProjectServicesBamboo);
+
+/**
+ * @function updateProjectServicesBuildkite
+ * @static
+ * 
+ * @summary Create/Edit Buildkite service
+ * @description
+ *
+ * `PUT /projects/:id/services/buildkite`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-buildkite-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-buildkite-service|repo doc}
+ * 
+ * @param {undefined} id                              - id
+ * @param {object}    payload                         - 
+ * @param {}          payload.token                   - (
+ * @param {}          payload.project_url             - (
+ * @param {}          payload.enable_ssl_verification - (optional) - Enable SSL verification
+ */
+export const updateProjectServicesBuildkite = wrap(defs.updateProjectServicesBuildkite);
+
+/**
+ * @function deleteProjectServicesBuildkite
+ * @static
+ * 
+ * @summary Delete Buildkite service
+ * @description
+ *
+ * `DELETE /projects/:id/services/buildkite`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-buildkite-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-buildkite-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesBuildkite = wrap(defs.deleteProjectServicesBuildkite);
+
+/**
+ * @function getProjectServicesBuildkite
+ * @static
+ * 
+ * @summary Get Buildkite service settings
+ * @description
+ *
+ * `GET /projects/:id/services/buildkite`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-buildkite-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-buildkite-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesBuildkite = wrap(defs.getProjectServicesBuildkite);
+
+/**
+ * @function updateProjectServicesCampfire
+ * @static
+ * 
+ * @summary Create/Edit Campfire service
+ * @description
+ *
+ * `PUT /projects/:id/services/campfire`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-campfire-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-campfire-service|repo doc}
+ * 
+ * @param {undefined} id                - id
+ * @param {object}    payload           - 
+ * @param {}          payload.token     - (
+ * @param {}          payload.subdomain - (optional)
+ * @param {}          payload.room      - (optional)
+ */
+export const updateProjectServicesCampfire = wrap(defs.updateProjectServicesCampfire);
+
+/**
+ * @function deleteProjectServicesCampfire
+ * @static
+ * 
+ * @summary Delete Campfire service
+ * @description
+ *
+ * `DELETE /projects/:id/services/campfire`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-campfire-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-campfire-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesCampfire = wrap(defs.deleteProjectServicesCampfire);
+
+/**
+ * @function getProjectServicesCampfire
+ * @static
+ * 
+ * @summary Get Campfire service settings
+ * @description
+ *
+ * `GET /projects/:id/services/campfire`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-campfire-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-campfire-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesCampfire = wrap(defs.getProjectServicesCampfire);
+
+/**
+ * @function updateProjectServicesCustom
+ * @static
+ * 
+ * @summary Create/Edit Custom Issue Tracker service
+ * @description
+ *
+ * `PUT /projects/:id/services/custom`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-custom-issue-tracker-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-custom-issue-tracker-service|repo doc}
+ * 
+ * @param {undefined} id                    - id
+ * @param {object}    payload               - 
+ * @param {}          payload.new_issue_url - (
+ * @param {}          payload.issues_url    - (
+ * @param {}          payload.project_url   - (
+ * @param {}          payload.description   - (optional) - Custom issue tracker
+ * @param {}          payload.title         - (optional) - Custom Issue Tracker
+ */
+export const updateProjectServicesCustom = wrap(defs.updateProjectServicesCustom);
+
+/**
+ * @function deleteProjectServicesCustom
+ * @static
+ * 
+ * @summary Delete Custom Issue Tracker service
+ * @description
+ *
+ * `DELETE /projects/:id/services/custom`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-custom-issue-tracker-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-custom-issue-tracker-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesCustom = wrap(defs.deleteProjectServicesCustom);
+
+/**
+ * @function getProjectServicesCustom
+ * @static
+ * 
+ * @summary Get Custom Issue Tracker service settings
+ * @description
+ *
+ * `GET /projects/:id/services/custom`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-custom-issue-tracker-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-custom-issue-tracker-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesCustom = wrap(defs.getProjectServicesCustom);
+
+/**
+ * @function updateProjectServicesDrone
+ * @static
+ * 
+ * @summary Create/Edit Drone CI service
+ * @description
+ *
+ * `PUT /projects/:id/services/drone`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-drone-ci-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-drone-ci-service|repo doc}
+ * 
+ * @param {undefined} id                              - id
+ * @param {object}    payload                         - 
+ * @param {}          payload.token                   - (
+ * @param {}          payload.drone_url               - (
+ * @param {}          payload.enable_ssl_verification - (optional) - Enable SSL verification
+ */
+export const updateProjectServicesDrone = wrap(defs.updateProjectServicesDrone);
+
+/**
+ * @function deleteProjectServicesDrone
+ * @static
+ * 
+ * @summary Delete Drone CI service
+ * @description
+ *
+ * `DELETE /projects/:id/services/drone`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-drone-ci-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-drone-ci-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesDrone = wrap(defs.deleteProjectServicesDrone);
+
+/**
+ * @function getProjectServicesDrone
+ * @static
+ * 
+ * @summary Get Drone CI service settings
+ * @description
+ *
+ * `GET /projects/:id/services/drone`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-drone-ci-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-drone-ci-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesDrone = wrap(defs.getProjectServicesDrone);
+
+/**
+ * @function updateProjectServicesEmails
+ * @static
+ * 
+ * @summary Create/Edit Emails on push service
+ * @description
+ *
+ * `PUT /projects/:id/services/emails`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-emails-on-push-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-emails-on-push-service|repo doc}
+ * 
+ * @param {undefined} id                                - id
+ * @param {object}    payload                           - 
+ * @param {}          payload.recipients                - (
+ * @param {}          payload.disable_diffs             - (optional) - Disable code diffs
+ * @param {}          payload.send_from_committer_email - (optional) - Send from committer
+ */
+export const updateProjectServicesEmails = wrap(defs.updateProjectServicesEmails);
+
+/**
+ * @function deleteProjectServicesEmails
+ * @static
+ * 
+ * @summary Delete Emails on push service
+ * @description
+ *
+ * `DELETE /projects/:id/services/emails`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-emails-on-push-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-emails-on-push-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesEmails = wrap(defs.deleteProjectServicesEmails);
+
+/**
+ * @function getProjectServicesEmails
+ * @static
+ * 
+ * @summary Get Emails on push service settings
+ * @description
+ *
+ * `GET /projects/:id/services/emails`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-emails-on-push-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-emails-on-push-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesEmails = wrap(defs.getProjectServicesEmails);
+
+/**
+ * @function updateProjectServicesExternal
+ * @static
+ * 
+ * @summary Create/Edit External Wiki service
+ * @description
+ *
+ * `PUT /projects/:id/services/external`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-external-wiki-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-external-wiki-service|repo doc}
+ * 
+ * @param {undefined} id                        - id
+ * @param {object}    payload                   - 
+ * @param {}          payload.external_wiki_url - (
+ */
+export const updateProjectServicesExternal = wrap(defs.updateProjectServicesExternal);
+
+/**
+ * @function deleteProjectServicesExternal
+ * @static
+ * 
+ * @summary Delete External Wiki service
+ * @description
+ *
+ * `DELETE /projects/:id/services/external`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-external-wiki-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-external-wiki-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesExternal = wrap(defs.deleteProjectServicesExternal);
+
+/**
+ * @function getProjectServicesExternal
+ * @static
+ * 
+ * @summary Get External Wiki service settings
+ * @description
+ *
+ * `GET /projects/:id/services/external`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-external-wiki-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-external-wiki-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesExternal = wrap(defs.getProjectServicesExternal);
+
+/**
+ * @function updateProjectServicesFlowdock
+ * @static
+ * 
+ * @summary Create/Edit Flowdock service
+ * @description
+ *
+ * `PUT /projects/:id/services/flowdock`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-flowdock-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-flowdock-service|repo doc}
+ * 
+ * @param {undefined} id            - id
+ * @param {object}    payload       - 
+ * @param {}          payload.token - (
+ */
+export const updateProjectServicesFlowdock = wrap(defs.updateProjectServicesFlowdock);
+
+/**
+ * @function deleteProjectServicesFlowdock
+ * @static
+ * 
+ * @summary Delete Flowdock service
+ * @description
+ *
+ * `DELETE /projects/:id/services/flowdock`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-flowdock-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-flowdock-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesFlowdock = wrap(defs.deleteProjectServicesFlowdock);
+
+/**
+ * @function getProjectServicesFlowdock
+ * @static
+ * 
+ * @summary Get Flowdock service settings
+ * @description
+ *
+ * `GET /projects/:id/services/flowdock`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-flowdock-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-flowdock-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesFlowdock = wrap(defs.getProjectServicesFlowdock);
+
+/**
+ * @function updateProjectServicesGemnasium
+ * @static
+ * 
+ * @summary Create/Edit Gemnasium service
+ * @description
+ *
+ * `PUT /projects/:id/services/gemnasium`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-gemnasium-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-gemnasium-service|repo doc}
+ * 
+ * @param {undefined} id              - id
+ * @param {object}    payload         - 
+ * @param {}          payload.api_key - (
+ * @param {}          payload.token   - (
+ */
+export const updateProjectServicesGemnasium = wrap(defs.updateProjectServicesGemnasium);
+
+/**
+ * @function deleteProjectServicesGemnasium
+ * @static
+ * 
+ * @summary Delete Gemnasium service
+ * @description
+ *
+ * `DELETE /projects/:id/services/gemnasium`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-gemnasium-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-gemnasium-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesGemnasium = wrap(defs.deleteProjectServicesGemnasium);
+
+/**
+ * @function getProjectServicesGemnasium
+ * @static
+ * 
+ * @summary Get Gemnasium service settings
+ * @description
+ *
+ * `GET /projects/:id/services/gemnasium`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-gemnasium-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-gemnasium-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesGemnasium = wrap(defs.getProjectServicesGemnasium);
+
+/**
+ * @function updateProjectServicesGitlab
+ * @static
+ * 
+ * @summary Create/Edit GitLab CI service
+ * @description
+ *
+ * `PUT /projects/:id/services/gitlab`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-gitlab-ci-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-gitlab-ci-service|repo doc}
+ * 
+ * @param {undefined} id                              - id
+ * @param {object}    payload                         - 
+ * @param {}          payload.token                   - (
+ * @param {}          payload.project_url             - (
+ * @param {}          payload.enable_ssl_verification - (optional) - Enable SSL verification
+ */
+export const updateProjectServicesGitlab = wrap(defs.updateProjectServicesGitlab);
+
+/**
+ * @function deleteProjectServicesGitlab
+ * @static
+ * 
+ * @summary Delete GitLab CI service
+ * @description
+ *
+ * `DELETE /projects/:id/services/gitlab`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-gitlab-ci-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-gitlab-ci-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesGitlab = wrap(defs.deleteProjectServicesGitlab);
+
+/**
+ * @function getProjectServicesGitlab
+ * @static
+ * 
+ * @summary Get GitLab CI service settings
+ * @description
+ *
+ * `GET /projects/:id/services/gitlab`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-gitlab-ci-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-gitlab-ci-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesGitlab = wrap(defs.getProjectServicesGitlab);
+
+/**
+ * @function updateProjectServicesHipchat
+ * @static
+ * 
+ * @summary Create/Edit HipChat service
+ * @description
+ *
+ * `PUT /projects/:id/services/hipchat`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-hipchat-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-hipchat-service|repo doc}
+ * 
+ * @param {undefined} id                  - id
+ * @param {object}    payload             - 
+ * @param {}          payload.token       - (
+ * @param {}          payload.color       - (optional)
+ * @param {}          payload.notify      - (optional)
+ * @param {}          payload.room        - (optional) - Room name or ID
+ * @param {}          payload.api_version - (optional) - Leave blank for default (v2)
+ * @param {}          payload.server      - (optional) - Leave blank for default. https://hipchat.example.com
+ */
+export const updateProjectServicesHipchat = wrap(defs.updateProjectServicesHipchat);
+
+/**
+ * @function deleteProjectServicesHipchat
+ * @static
+ * 
+ * @summary Delete HipChat service
+ * @description
+ *
+ * `DELETE /projects/:id/services/hipchat`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-hipchat-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-hipchat-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesHipchat = wrap(defs.deleteProjectServicesHipchat);
+
+/**
+ * @function getProjectServicesHipchat
+ * @static
+ * 
+ * @summary Get HipChat service settings
+ * @description
+ *
+ * `GET /projects/:id/services/hipchat`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-hipchat-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-hipchat-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesHipchat = wrap(defs.getProjectServicesHipchat);
+
+/**
+ * @function updateProjectServicesIrker
+ * @static
+ * 
+ * @summary Create/Edit Irker (IRC gateway) service
+ * @description
+ *
+ * `PUT /projects/:id/services/irker`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-irker-irc-gateway-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-irker-irc-gateway-service|repo doc}
+ * 
+ * @param {undefined} id                        - id
+ * @param {object}    payload                   - 
+ * @param {}          payload.recipients        - (
+ * @param {}          payload.default_irc_uri   - (optional) - irc://irc.network.net:6697/
+ * @param {}          payload.server_port       - (optional) - 6659
+ * @param {}          payload.server_host       - (optional) - localhost
+ * @param {}          payload.colorize_messages - (optional)
+ */
+export const updateProjectServicesIrker = wrap(defs.updateProjectServicesIrker);
+
+/**
+ * @function deleteProjectServicesIrker
+ * @static
+ * 
+ * @summary Delete Irker (IRC gateway) service
+ * @description
+ *
+ * `DELETE /projects/:id/services/irker`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-irker-irc-gateway-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-irker-irc-gateway-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesIrker = wrap(defs.deleteProjectServicesIrker);
+
+/**
+ * @function getProjectServicesIrker
+ * @static
+ * 
+ * @summary Get Irker (IRC gateway) service settings
+ * @description
+ *
+ * `GET /projects/:id/services/irker`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-irker-irc-gateway-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-irker-irc-gateway-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesIrker = wrap(defs.getProjectServicesIrker);
+
+/**
+ * @function updateProjectServicesJira
+ * @static
+ * 
+ * @summary Create/Edit JIRA service
+ * @description
+ *
+ * `PUT /projects/:id/services/jira`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-jira-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-jira-service|repo doc}
+ * 
+ * @param {undefined} id                    - id
+ * @param {object}    payload               - 
+ * @param {}          payload.new_issue_url - (
+ * @param {}          payload.project_url   - (
+ * @param {}          payload.issues_url    - (
+ * @param {}          payload.description   - (optional) - Jira issue tracker
+ */
+export const updateProjectServicesJira = wrap(defs.updateProjectServicesJira);
+
+/**
+ * @function deleteProjectServicesJira
+ * @static
+ * 
+ * @summary Delete JIRA service
+ * @description
+ *
+ * `DELETE /projects/:id/services/jira`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-jira-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-jira-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesJira = wrap(defs.deleteProjectServicesJira);
+
+/**
+ * @function getProjectServicesJira
+ * @static
+ * 
+ * @summary Get JIRA service settings
+ * @description
+ *
+ * `GET /projects/:id/services/jira`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-jira-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-jira-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesJira = wrap(defs.getProjectServicesJira);
+
+/**
+ * @function updateProjectServicesPivotaltracker
+ * @static
+ * 
+ * @summary Create/Edit PivotalTracker service
+ * @description
+ *
+ * `PUT /projects/:id/services/pivotaltracker`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-pivotaltracker-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-pivotaltracker-service|repo doc}
+ * 
+ * @param {undefined} id            - id
+ * @param {object}    payload       - 
+ * @param {}          payload.token - (
+ */
+export const updateProjectServicesPivotaltracker = wrap(defs.updateProjectServicesPivotaltracker);
+
+/**
+ * @function deleteProjectServicesPivotaltracker
+ * @static
+ * 
+ * @summary Delete PivotalTracker service
+ * @description
+ *
+ * `DELETE /projects/:id/services/pivotaltracker`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-pivotaltracker-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-pivotaltracker-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesPivotaltracker = wrap(defs.deleteProjectServicesPivotaltracker);
+
+/**
+ * @function getProjectServicesPivotaltracker
+ * @static
+ * 
+ * @summary Get PivotalTracker service settings
+ * @description
+ *
+ * `GET /projects/:id/services/pivotaltracker`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-pivotaltracker-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-pivotaltracker-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesPivotaltracker = wrap(defs.getProjectServicesPivotaltracker);
+
+/**
+ * @function updateProjectServicesPushover
+ * @static
+ * 
+ * @summary Create/Edit Pushover service
+ * @description
+ *
+ * `PUT /projects/:id/services/pushover`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-pushover-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-pushover-service|repo doc}
+ * 
+ * @param {undefined} id               - id
+ * @param {object}    payload          - 
+ * @param {}          payload.api_key  - (
+ * @param {}          payload.user_key - (
+ * @param {}          payload.priority - (
+ * @param {}          payload.device   - (optional) - Leave blank for all active devices
+ * @param {}          payload.sound    - (optional)
+ */
+export const updateProjectServicesPushover = wrap(defs.updateProjectServicesPushover);
+
+/**
+ * @function deleteProjectServicesPushover
+ * @static
+ * 
+ * @summary Delete Pushover service
+ * @description
+ *
+ * `DELETE /projects/:id/services/pushover`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-pushover-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-pushover-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesPushover = wrap(defs.deleteProjectServicesPushover);
+
+/**
+ * @function getProjectServicesPushover
+ * @static
+ * 
+ * @summary Get Pushover service settings
+ * @description
+ *
+ * `GET /projects/:id/services/pushover`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-pushover-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-pushover-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesPushover = wrap(defs.getProjectServicesPushover);
+
+/**
+ * @function updateProjectServicesRedmine
+ * @static
+ * 
+ * @summary Create/Edit Redmine service
+ * @description
+ *
+ * `PUT /projects/:id/services/redmine`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-redmine-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-redmine-service|repo doc}
+ * 
+ * @param {undefined} id                    - id
+ * @param {object}    payload               - 
+ * @param {}          payload.new_issue_url - (
+ * @param {}          payload.project_url   - (
+ * @param {}          payload.issues_url    - (
+ * @param {}          payload.description   - (optional) - Redmine issue tracker
+ */
+export const updateProjectServicesRedmine = wrap(defs.updateProjectServicesRedmine);
+
+/**
+ * @function deleteProjectServicesRedmine
+ * @static
+ * 
+ * @summary Delete Redmine service
+ * @description
+ *
+ * `DELETE /projects/:id/services/redmine`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-redmine-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-redmine-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesRedmine = wrap(defs.deleteProjectServicesRedmine);
+
+/**
+ * @function getProjectServicesRedmine
+ * @static
+ * 
+ * @summary Get Redmine service settings
+ * @description
+ *
+ * `GET /projects/:id/services/redmine`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-redmine-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-redmine-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesRedmine = wrap(defs.getProjectServicesRedmine);
+
+/**
+ * @function updateProjectServicesSlack
+ * @static
+ * 
+ * @summary Create/Edit Slack service
+ * @description
+ *
+ * `PUT /projects/:id/services/slack`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-slack-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-slack-service|repo doc}
+ * 
+ * @param {undefined} id               - id
+ * @param {object}    payload          - 
+ * @param {}          payload.webhook  - (
+ * @param {}          payload.username - (optional) - username
+ * @param {}          payload.channel  - (optional) - #channel
+ */
+export const updateProjectServicesSlack = wrap(defs.updateProjectServicesSlack);
+
+/**
+ * @function deleteProjectServicesSlack
+ * @static
+ * 
+ * @summary Delete Slack service
+ * @description
+ *
+ * `DELETE /projects/:id/services/slack`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-slack-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-slack-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesSlack = wrap(defs.deleteProjectServicesSlack);
+
+/**
+ * @function getProjectServicesSlack
+ * @static
+ * 
+ * @summary Get Slack service settings
+ * @description
+ *
+ * `GET /projects/:id/services/slack`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-slack-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-slack-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesSlack = wrap(defs.getProjectServicesSlack);
+
+/**
+ * @function updateProjectServicesTeamcity
+ * @static
+ * 
+ * @summary Create/Edit JetBrains TeamCity CI service
+ * @description
+ *
+ * `PUT /projects/:id/services/teamcity`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#createedit-jetbrains-teamcity-ci-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#createedit-jetbrains-teamcity-ci-service|repo doc}
+ * 
+ * @param {undefined} id                   - id
+ * @param {object}    payload              - 
+ * @param {}          payload.teamcity_url - (
+ * @param {}          payload.build_type   - (
+ * @param {}          payload.username     - (
+ * @param {}          payload.password     - (
+ */
+export const updateProjectServicesTeamcity = wrap(defs.updateProjectServicesTeamcity);
+
+/**
+ * @function deleteProjectServicesTeamcity
+ * @static
+ * 
+ * @summary Delete JetBrains TeamCity CI service
+ * @description
+ *
+ * `DELETE /projects/:id/services/teamcity`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#delete-jetbrains-teamcity-ci-service|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#delete-jetbrains-teamcity-ci-service|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const deleteProjectServicesTeamcity = wrap(defs.deleteProjectServicesTeamcity);
+
+/**
+ * @function getProjectServicesTeamcity
+ * @static
+ * 
+ * @summary Get JetBrains TeamCity CI service settings
+ * @description
+ *
+ * `GET /projects/:id/services/teamcity`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/services.html#get-jetbrains-teamcity-ci-service-settings|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/services.md#get-jetbrains-teamcity-ci-service-settings|repo doc}
+ * 
+ * @param {undefined} id - id
+ */
+export const getProjectServicesTeamcity = wrap(defs.getProjectServicesTeamcity);
+
+export default config => ({
+    updateProjectServicesAsana: updateProjectServicesAsana(config),
+    deleteProjectServicesAsana: deleteProjectServicesAsana(config),
+    getProjectServicesAsana: getProjectServicesAsana(config),
+    updateProjectServicesAssembla: updateProjectServicesAssembla(config),
+    deleteProjectServicesAssembla: deleteProjectServicesAssembla(config),
+    getProjectServicesAssembla: getProjectServicesAssembla(config),
+    updateProjectServicesBamboo: updateProjectServicesBamboo(config),
+    deleteProjectServicesBamboo: deleteProjectServicesBamboo(config),
+    getProjectServicesBamboo: getProjectServicesBamboo(config),
+    updateProjectServicesBuildkite: updateProjectServicesBuildkite(config),
+    deleteProjectServicesBuildkite: deleteProjectServicesBuildkite(config),
+    getProjectServicesBuildkite: getProjectServicesBuildkite(config),
+    updateProjectServicesCampfire: updateProjectServicesCampfire(config),
+    deleteProjectServicesCampfire: deleteProjectServicesCampfire(config),
+    getProjectServicesCampfire: getProjectServicesCampfire(config),
+    updateProjectServicesCustom: updateProjectServicesCustom(config),
+    deleteProjectServicesCustom: deleteProjectServicesCustom(config),
+    getProjectServicesCustom: getProjectServicesCustom(config),
+    updateProjectServicesDrone: updateProjectServicesDrone(config),
+    deleteProjectServicesDrone: deleteProjectServicesDrone(config),
+    getProjectServicesDrone: getProjectServicesDrone(config),
+    updateProjectServicesEmails: updateProjectServicesEmails(config),
+    deleteProjectServicesEmails: deleteProjectServicesEmails(config),
+    getProjectServicesEmails: getProjectServicesEmails(config),
+    updateProjectServicesExternal: updateProjectServicesExternal(config),
+    deleteProjectServicesExternal: deleteProjectServicesExternal(config),
+    getProjectServicesExternal: getProjectServicesExternal(config),
+    updateProjectServicesFlowdock: updateProjectServicesFlowdock(config),
+    deleteProjectServicesFlowdock: deleteProjectServicesFlowdock(config),
+    getProjectServicesFlowdock: getProjectServicesFlowdock(config),
+    updateProjectServicesGemnasium: updateProjectServicesGemnasium(config),
+    deleteProjectServicesGemnasium: deleteProjectServicesGemnasium(config),
+    getProjectServicesGemnasium: getProjectServicesGemnasium(config),
+    updateProjectServicesGitlab: updateProjectServicesGitlab(config),
+    deleteProjectServicesGitlab: deleteProjectServicesGitlab(config),
+    getProjectServicesGitlab: getProjectServicesGitlab(config),
+    updateProjectServicesHipchat: updateProjectServicesHipchat(config),
+    deleteProjectServicesHipchat: deleteProjectServicesHipchat(config),
+    getProjectServicesHipchat: getProjectServicesHipchat(config),
+    updateProjectServicesIrker: updateProjectServicesIrker(config),
+    deleteProjectServicesIrker: deleteProjectServicesIrker(config),
+    getProjectServicesIrker: getProjectServicesIrker(config),
+    updateProjectServicesJira: updateProjectServicesJira(config),
+    deleteProjectServicesJira: deleteProjectServicesJira(config),
+    getProjectServicesJira: getProjectServicesJira(config),
+    updateProjectServicesPivotaltracker: updateProjectServicesPivotaltracker(config),
+    deleteProjectServicesPivotaltracker: deleteProjectServicesPivotaltracker(config),
+    getProjectServicesPivotaltracker: getProjectServicesPivotaltracker(config),
+    updateProjectServicesPushover: updateProjectServicesPushover(config),
+    deleteProjectServicesPushover: deleteProjectServicesPushover(config),
+    getProjectServicesPushover: getProjectServicesPushover(config),
+    updateProjectServicesRedmine: updateProjectServicesRedmine(config),
+    deleteProjectServicesRedmine: deleteProjectServicesRedmine(config),
+    getProjectServicesRedmine: getProjectServicesRedmine(config),
+    updateProjectServicesSlack: updateProjectServicesSlack(config),
+    deleteProjectServicesSlack: deleteProjectServicesSlack(config),
+    getProjectServicesSlack: getProjectServicesSlack(config),
+    updateProjectServicesTeamcity: updateProjectServicesTeamcity(config),
+    deleteProjectServicesTeamcity: deleteProjectServicesTeamcity(config),
+    getProjectServicesTeamcity: getProjectServicesTeamcity(config)
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Mar 27 2016 16:21:49 GMT+0900 (JST) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
