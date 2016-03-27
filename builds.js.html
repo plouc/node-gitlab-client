@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>tags.js - Documentation</title>
+    <title>builds.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -28,7 +28,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">tags.js</h1>
+    <h1 class="page-title">builds.js</h1>
     
 
     
@@ -39,111 +39,163 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @module gitlab-api.tags
+ * @module gitlab-api.builds
  */
 
 import { wrap }  from '../wrapper';
-import * as defs from '../definitions/tags';
+import * as defs from '../definitions/builds';
 
 
 /**
- * @function getProjectRepositoryTags
+ * @function getProjectBuilds
  * @static
  * 
- * @summary List project repository tags
+ * @summary List project builds
  * @description
  *
- * `GET /projects/:id/repository/tags`
+ * `GET /projects/:id/builds`
  *
- * @see {@link http://doc.gitlab.com/ce/api/tags.html#list-project-repository-tags|website doc} -
- *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/tags.md#list-project-repository-tags|repo doc}
+ * ```bash
+ * curl -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" "https://gitlab.example.com/api/v3/projects/1/builds"
+ * ```
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/builds.html#list-project-builds|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/builds.md#list-project-builds|repo doc}
  * 
- * @param {} id - (required) - The ID of a project
+ * @param {integer} id - The ID of a project
  */
-export const getProjectRepositoryTags = wrap(defs.getProjectRepositoryTags);
+export const getProjectBuilds = wrap(defs.getProjectBuilds);
 
 /**
- * @function addProjectRepositoryTag
+ * @function getProjectRepositoryCommitBuilds
  * @static
  * 
- * @summary Create a new tag
+ * @summary List commit builds
  * @description
  *
- * `POST /projects/:id/repository/tags`
+ * `GET /projects/:id/repository/commits/:sha/builds`
  *
- * @see {@link http://doc.gitlab.com/ce/api/tags.html#create-a-new-tag|website doc} -
- *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/tags.md#create-a-new-tag|repo doc}
+ * ```bash
+ * curl -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" "https://gitlab.example.com/api/v3/projects/1/repository/commits/0ff3ae198f8601a285adcf5c0fff204ee6fba5fd/builds"
+ * ```
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/builds.html#list-commit-builds|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/builds.md#list-commit-builds|repo doc}
  * 
- * @param {}       id                          - (required) - The ID of a project
- * @param {object} payload                     - 
- * @param {}       payload.tag_name            - (required) - The name of a tag
- * @param {}       payload.ref                 - (required) - Create tag using commit SHA, another tag name, or branch name.
- * @param {}       payload.message             - (optional) - Creates annotated tag.
- * @param {}       payload.release_description - (optional) - Add release notes to the git tag and store it in the GitLab database.
+ * @param {integer} id  - The ID of a project
+ * @param {string}  sha - The SHA id of a commit
  */
-export const addProjectRepositoryTag = wrap(defs.addProjectRepositoryTag);
+export const getProjectRepositoryCommitBuilds = wrap(defs.getProjectRepositoryCommitBuilds);
 
 /**
- * @function deleteProjectRepositoryTag
+ * @function getProjectBuild
  * @static
  * 
- * @summary Delete a tag
+ * @summary Get a single build
  * @description
  *
- * `DELETE /projects/:id/repository/tags/:tag_name`
+ * `GET /projects/:id/builds/:build_id`
  *
- * @see {@link http://doc.gitlab.com/ce/api/tags.html#delete-a-tag|website doc} -
- *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/tags.md#delete-a-tag|repo doc}
+ * ```bash
+ * curl -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" "https://gitlab.example.com/api/v3/projects/1/builds/8"
+ * ```
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/builds.html#get-a-single-build|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/builds.md#get-a-single-build|repo doc}
  * 
- * @param {} id       - (required) - The ID of a project
- * @param {} tag_name - (required) - The name of a tag
+ * @param {integer} id       - The ID of a project
+ * @param {integer} build_id - The ID of a build
  */
-export const deleteProjectRepositoryTag = wrap(defs.deleteProjectRepositoryTag);
+export const getProjectBuild = wrap(defs.getProjectBuild);
 
 /**
- * @function addProjectRepositoryTagRelease
+ * @function getProjectBuildArtifacts
  * @static
  * 
- * @summary Create a new release
+ * @summary Get build artifacts
  * @description
  *
- * `POST /projects/:id/repository/tags/:tag_name/release`
+ * `GET /projects/:id/builds/:build_id/artifacts`
  *
- * @see {@link http://doc.gitlab.com/ce/api/tags.html#create-a-new-release|website doc} -
- *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/tags.md#create-a-new-release|repo doc}
+ * ```bash
+ * curl -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" "https://gitlab.example.com/api/v3/projects/1/builds/8/artifacts"
+ * ```
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/builds.html#get-build-artifacts|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/builds.md#get-build-artifacts|repo doc}
  * 
- * @param {}       id                  - (required) - The ID of a project
- * @param {}       tag_name            - (required) - The name of a tag
- * @param {object} payload             - 
- * @param {}       payload.description - (required) - Release notes with markdown support
+ * @param {integer} id       - The ID of a project
+ * @param {integer} build_id - The ID of a build
  */
-export const addProjectRepositoryTagRelease = wrap(defs.addProjectRepositoryTagRelease);
+export const getProjectBuildArtifacts = wrap(defs.getProjectBuildArtifacts);
 
 /**
- * @function updateProjectRepositoryTagRelease
+ * @function addProjectBuildCancel
  * @static
  * 
- * @summary Update a release
+ * @summary Cancel a build
  * @description
  *
- * `PUT /projects/:id/repository/tags/:tag_name/release`
+ * `POST /projects/:id/builds/:build_id/cancel`
  *
- * @see {@link http://doc.gitlab.com/ce/api/tags.html#update-a-release|website doc} -
- *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/tags.md#update-a-release|repo doc}
+ * ```bash
+ * curl -X POST -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" "https://gitlab.example.com/api/v3/projects/1/builds/1/cancel"
+ * ```
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/builds.html#cancel-a-build|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/builds.md#cancel-a-build|repo doc}
  * 
- * @param {}       id                  - (required) - The ID of a project
- * @param {}       tag_name            - (required) - The name of a tag
- * @param {object} payload             - 
- * @param {}       payload.description - (required) - Release notes with markdown support
+ * @param {integer} id       - The ID of a project
+ * @param {integer} build_id - The ID of a build
  */
-export const updateProjectRepositoryTagRelease = wrap(defs.updateProjectRepositoryTagRelease);
+export const addProjectBuildCancel = wrap(defs.addProjectBuildCancel);
+
+/**
+ * @function addProjectBuildRetry
+ * @static
+ * 
+ * @summary Retry a build
+ * @description
+ *
+ * `POST /projects/:id/builds/:build_id/retry`
+ *
+ * ```bash
+ * curl -X POST -H "PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK" "https://gitlab.example.com/api/v3/projects/1/builds/1/retry"
+ * ```
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/builds.html#retry-a-build|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/builds.md#retry-a-build|repo doc}
+ * 
+ * @param {integer} id       - The ID of a project
+ * @param {integer} build_id - The ID of a build
+ */
+export const addProjectBuildRetry = wrap(defs.addProjectBuildRetry);
+
+/**
+ * @function addProjectBuildErase
+ * @static
+ * 
+ * @summary Erase a build
+ * @description
+ *
+ * `POST /projects/:id/builds/:build_id/erase`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/builds.html#erase-a-build|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/builds.md#erase-a-build|repo doc}
+ * 
+ * @param {integer} id       - The ID of a project
+ * @param {integer} build_id - The ID of a build
+ */
+export const addProjectBuildErase = wrap(defs.addProjectBuildErase);
 
 export default config => ({
-    getProjectRepositoryTags: getProjectRepositoryTags(config),
-    addProjectRepositoryTag: addProjectRepositoryTag(config),
-    deleteProjectRepositoryTag: deleteProjectRepositoryTag(config),
-    addProjectRepositoryTagRelease: addProjectRepositoryTagRelease(config),
-    updateProjectRepositoryTagRelease: updateProjectRepositoryTagRelease(config)
+    getProjectBuilds: getProjectBuilds(config),
+    getProjectRepositoryCommitBuilds: getProjectRepositoryCommitBuilds(config),
+    getProjectBuild: getProjectBuild(config),
+    getProjectBuildArtifacts: getProjectBuildArtifacts(config),
+    addProjectBuildCancel: addProjectBuildCancel(config),
+    addProjectBuildRetry: addProjectBuildRetry(config),
+    addProjectBuildErase: addProjectBuildErase(config)
 });
 </code></pre>
         </article>

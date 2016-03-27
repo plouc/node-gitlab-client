@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>labels - Documentation</title>
+    <title>builds - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -28,7 +28,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">labels</h1>
+    <h1 class="page-title">builds</h1>
     
 
     
@@ -52,7 +52,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="labels.js.html">labels.js</a>, <a href="labels.js.html#line1">line 1</a>
+        <a href="builds.js.html">builds.js</a>, <a href="builds.js.html#line1">line 1</a>
     </li></ul></dd>
     
 
@@ -116,10 +116,10 @@
 
     
 
-    <h4 class="name" id=".addProjectLabel"><span class="type-signature">(static) </span>addProjectLabel<span class="signature">(id, payload)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id=".addProjectBuildCancel"><span class="type-signature">(static) </span>addProjectBuildCancel<span class="signature">(id, build_id)</span><span class="type-signature"></span></h4>
 
     
-    <p class="summary">Create a new label</p>
+    <p class="summary">Cancel a build</p>
     
 
 
@@ -130,7 +130,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="labels.js.html">labels.js</a>, <a href="labels.js.html#line29">line 29</a>
+        <a href="builds.js.html">builds.js</a>, <a href="builds.js.html#line92">line 92</a>
     </li></ul></dd>
     
 
@@ -164,8 +164,8 @@
     <dt class="tag-see">See:</dt>
     <dd class="tag-see">
         <ul>
-            <li><a href="http://doc.gitlab.com/ce/api/labels.html#create-a-new-label">website doc</a> -
-     <a href="https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/labels.md#create-a-new-label">repo doc</a></li>
+            <li><a href="http://doc.gitlab.com/ce/api/builds.html#cancel-a-build">website doc</a> -
+     <a href="https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/builds.md#cancel-a-build">repo doc</a></li>
         </ul>
     </dd>
     
@@ -178,8 +178,8 @@
 
 
 <div class="description">
-    <p><code>POST /projects/:id/labels</code></p>
-<pre class="prettyprint source lang-bash"><code>curl --data &quot;name=feature&color=#5843AD&quot; -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/labels&quot;</code></pre>
+    <p><code>POST /projects/:id/builds/:build_id/cancel</code></p>
+<pre class="prettyprint source lang-bash"><code>curl -X POST -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds/1/cancel&quot;</code></pre>
 </div>
 
 
@@ -233,20 +233,20 @@
 
             
 
-            <td class="description last"><p>The ID of the project</p></td>
+            <td class="description last"><p>The ID of a project</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>payload</code></td>
+                <td class="name"><code>build_id</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">object</span>
+<span class="param-type">integer</span>
 
 
             
@@ -256,79 +256,7 @@
 
             
 
-            <td class="description last"><p>-</p>
-                <h6>Properties</h6>
-                
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The name of the label</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>color</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The color of the label in 6-digit hex notation with leading # sign</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
+            <td class="description last"><p>The ID of a build</p></td>
         </tr>
 
     
@@ -355,10 +283,10 @@
 
     
 
-    <h4 class="name" id=".deleteProjectLabels"><span class="type-signature">(static) </span>deleteProjectLabels<span class="signature">(id)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id=".addProjectBuildErase"><span class="type-signature">(static) </span>addProjectBuildErase<span class="signature">(id, build_id)</span><span class="type-signature"></span></h4>
 
     
-    <p class="summary">Delete a label</p>
+    <p class="summary">Erase a build</p>
     
 
 
@@ -369,7 +297,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="labels.js.html">labels.js</a>, <a href="labels.js.html#line52">line 52</a>
+        <a href="builds.js.html">builds.js</a>, <a href="builds.js.html#line134">line 134</a>
     </li></ul></dd>
     
 
@@ -403,8 +331,8 @@
     <dt class="tag-see">See:</dt>
     <dd class="tag-see">
         <ul>
-            <li><a href="http://doc.gitlab.com/ce/api/labels.html#delete-a-label">website doc</a> -
-     <a href="https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/labels.md#delete-a-label">repo doc</a></li>
+            <li><a href="http://doc.gitlab.com/ce/api/builds.html#erase-a-build">website doc</a> -
+     <a href="https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/builds.md#erase-a-build">repo doc</a></li>
         </ul>
     </dd>
     
@@ -417,8 +345,7 @@
 
 
 <div class="description">
-    <p><code>DELETE /projects/:id/labels</code></p>
-<pre class="prettyprint source lang-bash"><code>curl -X DELETE -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/labels?name=bug&quot;</code></pre>
+    <p><code>POST /projects/:id/builds/:build_id/erase</code></p>
 </div>
 
 
@@ -472,7 +399,30 @@
 
             
 
-            <td class="description last"><p>The ID of the project</p></td>
+            <td class="description last"><p>The ID of a project</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>build_id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">integer</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The ID of a build</p></td>
         </tr>
 
     
@@ -499,10 +449,10 @@
 
     
 
-    <h4 class="name" id=".getProjectLabels"><span class="type-signature">(static) </span>getProjectLabels<span class="signature">(id)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id=".addProjectBuildRetry"><span class="type-signature">(static) </span>addProjectBuildRetry<span class="signature">(id, build_id)</span><span class="type-signature"></span></h4>
 
     
-    <p class="summary">List labels</p>
+    <p class="summary">Retry a build</p>
     
 
 
@@ -513,7 +463,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="labels.js.html">labels.js</a>, <a href="labels.js.html#line9">line 9</a>
+        <a href="builds.js.html">builds.js</a>, <a href="builds.js.html#line113">line 113</a>
     </li></ul></dd>
     
 
@@ -547,8 +497,8 @@
     <dt class="tag-see">See:</dt>
     <dd class="tag-see">
         <ul>
-            <li><a href="http://doc.gitlab.com/ce/api/labels.html#list-labels">website doc</a> -
-     <a href="https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/labels.md#list-labels">repo doc</a></li>
+            <li><a href="http://doc.gitlab.com/ce/api/builds.html#retry-a-build">website doc</a> -
+     <a href="https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/builds.md#retry-a-build">repo doc</a></li>
         </ul>
     </dd>
     
@@ -561,8 +511,8 @@
 
 
 <div class="description">
-    <p><code>GET /projects/:id/labels</code></p>
-<pre class="prettyprint source lang-bash"><code>curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; https://gitlab.example.com/api/v3/projects/1/labels</code></pre>
+    <p><code>POST /projects/:id/builds/:build_id/retry</code></p>
+<pre class="prettyprint source lang-bash"><code>curl -X POST -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds/1/retry&quot;</code></pre>
 </div>
 
 
@@ -616,7 +566,30 @@
 
             
 
-            <td class="description last"><p>The ID of the project</p></td>
+            <td class="description last"><p>The ID of a project</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>build_id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">integer</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The ID of a build</p></td>
         </tr>
 
     
@@ -643,10 +616,10 @@
 
     
 
-    <h4 class="name" id=".updateProjectLabels"><span class="type-signature">(static) </span>updateProjectLabels<span class="signature">(id, payload)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id=".getProjectBuild"><span class="type-signature">(static) </span>getProjectBuild<span class="signature">(id, build_id)</span><span class="type-signature"></span></h4>
 
     
-    <p class="summary">Edit an existing label</p>
+    <p class="summary">Get a single build</p>
     
 
 
@@ -657,7 +630,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="labels.js.html">labels.js</a>, <a href="labels.js.html#line72">line 72</a>
+        <a href="builds.js.html">builds.js</a>, <a href="builds.js.html#line50">line 50</a>
     </li></ul></dd>
     
 
@@ -691,8 +664,8 @@
     <dt class="tag-see">See:</dt>
     <dd class="tag-see">
         <ul>
-            <li><a href="http://doc.gitlab.com/ce/api/labels.html#edit-an-existing-label">website doc</a> -
-     <a href="https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/labels.md#edit-an-existing-label">repo doc</a></li>
+            <li><a href="http://doc.gitlab.com/ce/api/builds.html#get-a-single-build">website doc</a> -
+     <a href="https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/builds.md#get-a-single-build">repo doc</a></li>
         </ul>
     </dd>
     
@@ -705,8 +678,8 @@
 
 
 <div class="description">
-    <p><code>PUT /projects/:id/labels</code></p>
-<pre class="prettyprint source lang-bash"><code>curl -X PUT --data &quot;name=documentation&new_name=docs&color=#8E44AD&quot; -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/labels&quot;</code></pre>
+    <p><code>GET /projects/:id/builds/:build_id</code></p>
+<pre class="prettyprint source lang-bash"><code>curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds/8&quot;</code></pre>
 </div>
 
 
@@ -760,20 +733,20 @@
 
             
 
-            <td class="description last"><p>The ID of the project</p></td>
+            <td class="description last"><p>The ID of a project</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>payload</code></td>
+                <td class="name"><code>build_id</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">object</span>
+<span class="param-type">integer</span>
 
 
             
@@ -783,9 +756,111 @@
 
             
 
-            <td class="description last"><p>-</p>
-                <h6>Properties</h6>
-                
+            <td class="description last"><p>The ID of a build</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".getProjectBuildArtifacts"><span class="type-signature">(static) </span>getProjectBuildArtifacts<span class="signature">(id, build_id)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Get build artifacts</p>
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="builds.js.html">builds.js</a>, <a href="builds.js.html#line71">line 71</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="http://doc.gitlab.com/ce/api/builds.html#get-build-artifacts">website doc</a> -
+     <a href="https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/builds.md#get-build-artifacts">repo doc</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p><code>GET /projects/:id/builds/:build_id/artifacts</code></p>
+<pre class="prettyprint source lang-bash"><code>curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds/8/artifacts&quot;</code></pre>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
 
 <table class="params">
     <thead>
@@ -809,13 +884,13 @@
 
         <tr>
             
-                <td class="name"><code>name</code></td>
+                <td class="name"><code>id</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">integer</span>
 
 
             
@@ -825,20 +900,20 @@
 
             
 
-            <td class="description last"><p>The name of the existing label</p></td>
+            <td class="description last"><p>The ID of a project</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>new_name</code></td>
+                <td class="name"><code>build_id</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">integer</span>
 
 
             
@@ -848,37 +923,318 @@
 
             
 
-            <td class="description last"><p>The new name of the label</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>color</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The new color of the label in 6-digit hex notation with leading # sign</p></td>
+            <td class="description last"><p>The ID of a build</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".getProjectBuilds"><span class="type-signature">(static) </span>getProjectBuilds<span class="signature">(id)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">List project builds</p>
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="builds.js.html">builds.js</a>, <a href="builds.js.html#line9">line 9</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="http://doc.gitlab.com/ce/api/builds.html#list-project-builds">website doc</a> -
+     <a href="https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/builds.md#list-project-builds">repo doc</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p><code>GET /projects/:id/builds</code></p>
+<pre class="prettyprint source lang-bash"><code>curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/builds&quot;</code></pre>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">integer</span>
+
+
+            
             </td>
+
+            
+
+            
+
+            <td class="description last"><p>The ID of a project</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".getProjectRepositoryCommitBuilds"><span class="type-signature">(static) </span>getProjectRepositoryCommitBuilds<span class="signature">(id, sha)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">List commit builds</p>
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="builds.js.html">builds.js</a>, <a href="builds.js.html#line29">line 29</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="http://doc.gitlab.com/ce/api/builds.html#list-commit-builds">website doc</a> -
+     <a href="https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/builds.md#list-commit-builds">repo doc</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p><code>GET /projects/:id/repository/commits/:sha/builds</code></p>
+<pre class="prettyprint source lang-bash"><code>curl -H &quot;PRIVATE-TOKEN: 9koXpg98eAheJpvBs5tK&quot; &quot;https://gitlab.example.com/api/v3/projects/1/repository/commits/0ff3ae198f8601a285adcf5c0fff204ee6fba5fd/builds&quot;</code></pre>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">integer</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The ID of a project</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sha</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The SHA id of a commit</p></td>
         </tr>
 
     
