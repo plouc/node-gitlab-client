@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>projects.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="gitlab-api.module_labels.html">labels</a><ul class='methods'><li data-type='method'><a href="gitlab-api.module_labels.html#.addProjectLabel">addProjectLabel</a></li><li data-type='method'><a href="gitlab-api.module_labels.html#.deleteProjectLabels">deleteProjectLabels</a></li><li data-type='method'><a href="gitlab-api.module_labels.html#.getProjectLabels">getProjectLabels</a></li><li data-type='method'><a href="gitlab-api.module_labels.html#.updateProjectLabels">updateProjectLabels</a></li></ul></li><li><a href="gitlab-api.module_projects.html">projects</a><ul class='methods'><li data-type='method'><a href="gitlab-api.module_projects.html#.addProject">addProject</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.addProjectFork">addProjectFork</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.addProjectHook">addProjectHook</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.addProjectMember">addProjectMember</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.addProjectsFork">addProjectsFork</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.addProjectShare">addProjectShare</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.addProjectsUser">addProjectsUser</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.addProjectUpload">addProjectUpload</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.deleteProject">deleteProject</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.deleteProjectFork">deleteProjectFork</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.deleteProjectHook">deleteProjectHook</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.deleteProjectMember">deleteProjectMember</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProject">getProject</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectEvents">getProjectEvents</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectHook">getProjectHook</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectHooks">getProjectHooks</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectMember">getProjectMember</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectMembers">getProjectMembers</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectRepositoryBranch">getProjectRepositoryBranch</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectRepositoryBranches">getProjectRepositoryBranches</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjects">getProjects</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectsAll">getProjectsAll</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectsOwned">getProjectsOwned</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectsSearch">getProjectsSearch</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.getProjectsStarred">getProjectsStarred</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.updateProject">updateProject</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.updateProjectHook">updateProjectHook</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.updateProjectMember">updateProjectMember</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.updateProjectRepositoryBranchProtect">updateProjectRepositoryBranchProtect</a></li><li data-type='method'><a href="gitlab-api.module_projects.html#.updateProjectRepositoryBranchUnprotect">updateProjectRepositoryBranchUnprotect</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">projects.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module gitlab-api.projects
+ */
+
+import { wrap }  from '../wrapper';
+import * as defs from '../definitions/projects';
+
+
+/**
+ * @function getProjects
+ * @static
+ * 
+ * @summary List projects
+ * @description
+ *
+ * `GET /projects`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#list-projects|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#list-projects|repo doc}
+ * 
+
+ */
+export const getProjects = wrap(defs.getProjects);
+
+/**
+ * @function getProjectsOwned
+ * @static
+ * 
+ * @summary List owned projects
+ * @description
+ *
+ * `GET /projects/owned`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#list-owned-projects|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#list-owned-projects|repo doc}
+ * 
+
+ */
+export const getProjectsOwned = wrap(defs.getProjectsOwned);
+
+/**
+ * @function getProjectsStarred
+ * @static
+ * 
+ * @summary List starred projects
+ * @description
+ *
+ * `GET /projects/starred`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#list-starred-projects|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#list-starred-projects|repo doc}
+ * 
+
+ */
+export const getProjectsStarred = wrap(defs.getProjectsStarred);
+
+/**
+ * @function getProjectsAll
+ * @static
+ * 
+ * @summary List ALL projects
+ * @description
+ *
+ * `GET /projects/all`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#list-all-projects|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#list-all-projects|repo doc}
+ * 
+
+ */
+export const getProjectsAll = wrap(defs.getProjectsAll);
+
+/**
+ * @function getProject
+ * @static
+ * 
+ * @summary Get single project
+ * @description
+ *
+ * `GET /projects/:id`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#get-single-project|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#get-single-project|repo doc}
+ * 
+ * @param {} id - (required) - The ID or NAMESPACE/PROJECT_NAME of a project
+ */
+export const getProject = wrap(defs.getProject);
+
+/**
+ * @function getProjectEvents
+ * @static
+ * 
+ * @summary Get project events
+ * @description
+ *
+ * `GET /projects/:id/events`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#get-project-events|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#get-project-events|repo doc}
+ * 
+ * @param {} id - (required) - The ID or NAMESPACE/PROJECT_NAME of a project
+ */
+export const getProjectEvents = wrap(defs.getProjectEvents);
+
+/**
+ * @function addProject
+ * @static
+ * 
+ * @summary Create project
+ * @description
+ *
+ * `POST /projects`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#create-project|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#create-project|repo doc}
+ * 
+ * @param {object} payload                        - 
+ * @param {}       payload.name                   - (required) - new project name
+ * @param {}       payload.path                   - (optional) - custom repository name for new project. By default generated based on name
+ * @param {}       payload.namespace_id           - (optional) - namespace for the new project (defaults to user)
+ * @param {}       payload.description            - (optional) - short project description
+ * @param {}       payload.issues_enabled         - (optional)
+ * @param {}       payload.merge_requests_enabled - (optional)
+ * @param {}       payload.builds_enabled         - (optional)
+ * @param {}       payload.wiki_enabled           - (optional)
+ * @param {}       payload.snippets_enabled       - (optional)
+ * @param {}       payload.public                 - (optional) - if
+ * @param {}       payload.visibility_level       - (optional)
+ * @param {}       payload.import_url             - (optional)
+ * @param {}       payload.public_builds          - (optional)
+ */
+export const addProject = wrap(defs.addProject);
+
+/**
+ * @function addProjectsUser
+ * @static
+ * 
+ * @summary Create project for user
+ * @description
+ *
+ * `POST /projects/user/:user_id`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#create-project-for-user|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#create-project-for-user|repo doc}
+ * 
+ * @param {}       user_id                        - (required) - user_id of owner
+ * @param {object} payload                        - 
+ * @param {}       payload.name                   - (required) - new project name
+ * @param {}       payload.description            - (optional) - short project description
+ * @param {}       payload.issues_enabled         - (optional)
+ * @param {}       payload.merge_requests_enabled - (optional)
+ * @param {}       payload.builds_enabled         - (optional)
+ * @param {}       payload.wiki_enabled           - (optional)
+ * @param {}       payload.snippets_enabled       - (optional)
+ * @param {}       payload.public                 - (optional) - if
+ * @param {}       payload.visibility_level       - (optional)
+ * @param {}       payload.import_url             - (optional)
+ * @param {}       payload.public_builds          - (optional)
+ */
+export const addProjectsUser = wrap(defs.addProjectsUser);
+
+/**
+ * @function updateProject
+ * @static
+ * 
+ * @summary Edit project
+ * @description
+ *
+ * `PUT /projects/:id`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#edit-project|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#edit-project|repo doc}
+ * 
+ * @param {}       id                             - (required) - The ID of a project
+ * @param {object} payload                        - 
+ * @param {}       payload.name                   - (optional) - project name
+ * @param {}       payload.path                   - (optional) - repository name for project
+ * @param {}       payload.description            - (optional) - short project description
+ * @param {}       payload.default_branch         - (optional)
+ * @param {}       payload.issues_enabled         - (optional)
+ * @param {}       payload.merge_requests_enabled - (optional)
+ * @param {}       payload.builds_enabled         - (optional)
+ * @param {}       payload.wiki_enabled           - (optional)
+ * @param {}       payload.snippets_enabled       - (optional)
+ * @param {}       payload.public                 - (optional) - if
+ * @param {}       payload.visibility_level       - (optional)
+ * @param {}       payload.public_builds          - (optional)
+ */
+export const updateProject = wrap(defs.updateProject);
+
+/**
+ * @function addProjectsFork
+ * @static
+ * 
+ * @summary Fork project
+ * @description
+ *
+ * `POST /projects/fork/:id`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#fork-project|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#fork-project|repo doc}
+ * 
+ * @param {} id - (required) - The ID of the project to be forked
+ */
+export const addProjectsFork = wrap(defs.addProjectsFork);
+
+/**
+ * @function deleteProject
+ * @static
+ * 
+ * @summary Remove project
+ * @description
+ *
+ * `DELETE /projects/:id`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#remove-project|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#remove-project|repo doc}
+ * 
+ * @param {} id - (required) - The ID of a project
+ */
+export const deleteProject = wrap(defs.deleteProject);
+
+/**
+ * @function addProjectUpload
+ * @static
+ * 
+ * @summary Upload a file
+ * @description
+ *
+ * `POST /projects/:id/uploads`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#upload-a-file|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#upload-a-file|repo doc}
+ * 
+ * @param {}       id           - (required) - The ID of the project
+ * @param {object} payload      - 
+ * @param {}       payload.file - (required) - The file to be uploaded
+ */
+export const addProjectUpload = wrap(defs.addProjectUpload);
+
+/**
+ * @function getProjectMembers
+ * @static
+ * 
+ * @summary List project team members
+ * @description
+ *
+ * `GET /projects/:id/members`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#list-project-team-members|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#list-project-team-members|repo doc}
+ * 
+ * @param {} id - (required) - The ID or NAMESPACE/PROJECT_NAME of a project
+ */
+export const getProjectMembers = wrap(defs.getProjectMembers);
+
+/**
+ * @function getProjectMember
+ * @static
+ * 
+ * @summary Get project team member
+ * @description
+ *
+ * `GET /projects/:id/members/:user_id`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#get-project-team-member|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#get-project-team-member|repo doc}
+ * 
+ * @param {} id      - (required) - The ID or NAMESPACE/PROJECT_NAME of a project
+ * @param {} user_id - (required) - The ID of a user
+ */
+export const getProjectMember = wrap(defs.getProjectMember);
+
+/**
+ * @function addProjectMember
+ * @static
+ * 
+ * @summary Add project team member
+ * @description
+ *
+ * `POST /projects/:id/members`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#add-project-team-member|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#add-project-team-member|repo doc}
+ * 
+ * @param {}       id                   - (required) - The ID or NAMESPACE/PROJECT_NAME of a project
+ * @param {object} payload              - 
+ * @param {}       payload.user_id      - (required) - The ID of a user to add
+ * @param {}       payload.access_level - (required) - Project access level
+ */
+export const addProjectMember = wrap(defs.addProjectMember);
+
+/**
+ * @function updateProjectMember
+ * @static
+ * 
+ * @summary Edit project team member
+ * @description
+ *
+ * `PUT /projects/:id/members/:user_id`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#edit-project-team-member|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#edit-project-team-member|repo doc}
+ * 
+ * @param {}       id                   - (required) - The ID or NAMESPACE/PROJECT_NAME of a project
+ * @param {}       user_id              - (required) - The ID of a team member
+ * @param {object} payload              - 
+ * @param {}       payload.access_level - (required) - Project access level
+ */
+export const updateProjectMember = wrap(defs.updateProjectMember);
+
+/**
+ * @function deleteProjectMember
+ * @static
+ * 
+ * @summary Remove project team member
+ * @description
+ *
+ * `DELETE /projects/:id/members/:user_id`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#remove-project-team-member|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#remove-project-team-member|repo doc}
+ * 
+ * @param {} id      - (required) - The ID or NAMESPACE/PROJECT_NAME of a project
+ * @param {} user_id - (required) - The ID of a team member
+ */
+export const deleteProjectMember = wrap(defs.deleteProjectMember);
+
+/**
+ * @function addProjectShare
+ * @static
+ * 
+ * @summary Share project with group
+ * @description
+ *
+ * `POST /projects/:id/share`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#share-project-with-group|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#share-project-with-group|repo doc}
+ * 
+ * @param {}       id                   - (required) - The ID of a project
+ * @param {object} payload              - 
+ * @param {}       payload.group_id     - (required) - The ID of a group
+ * @param {}       payload.group_access - (required) - Level of permissions for sharing
+ */
+export const addProjectShare = wrap(defs.addProjectShare);
+
+/**
+ * @function getProjectHooks
+ * @static
+ * 
+ * @summary List project hooks
+ * @description
+ *
+ * `GET /projects/:id/hooks`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#list-project-hooks|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#list-project-hooks|repo doc}
+ * 
+ * @param {} id - (required) - The ID or NAMESPACE/PROJECT_NAME of a project
+ */
+export const getProjectHooks = wrap(defs.getProjectHooks);
+
+/**
+ * @function getProjectHook
+ * @static
+ * 
+ * @summary Get project hook
+ * @description
+ *
+ * `GET /projects/:id/hooks/:hook_id`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#get-project-hook|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#get-project-hook|repo doc}
+ * 
+ * @param {} id      - (required) - The ID or NAMESPACE/PROJECT_NAME of a project
+ * @param {} hook_id - (required) - The ID of a project hook
+ */
+export const getProjectHook = wrap(defs.getProjectHook);
+
+/**
+ * @function addProjectHook
+ * @static
+ * 
+ * @summary Add project hook
+ * @description
+ *
+ * `POST /projects/:id/hooks`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#add-project-hook|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#add-project-hook|repo doc}
+ * 
+ * @param {}       id                              - (required) - The ID or NAMESPACE/PROJECT_NAME of a project
+ * @param {object} payload                         - 
+ * @param {}       payload.url                     - (required) - The hook URL
+ * @param {}       payload.push_events             - - Trigger hook on push events
+ * @param {}       payload.issues_events           - - Trigger hook on issues events
+ * @param {}       payload.merge_requests_events   - - Trigger hook on merge_requests events
+ * @param {}       payload.tag_push_events         - - Trigger hook on push_tag events
+ * @param {}       payload.note_events             - - Trigger hook on note events
+ * @param {}       payload.enable_ssl_verification - - Do SSL verification when triggering the hook
+ */
+export const addProjectHook = wrap(defs.addProjectHook);
+
+/**
+ * @function updateProjectHook
+ * @static
+ * 
+ * @summary Edit project hook
+ * @description
+ *
+ * `PUT /projects/:id/hooks/:hook_id`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#edit-project-hook|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#edit-project-hook|repo doc}
+ * 
+ * @param {}       id                              - (required) - The ID or NAMESPACE/PROJECT_NAME of a project
+ * @param {}       hook_id                         - (required) - The ID of a project hook
+ * @param {object} payload                         - 
+ * @param {}       payload.url                     - (required) - The hook URL
+ * @param {}       payload.push_events             - - Trigger hook on push events
+ * @param {}       payload.issues_events           - - Trigger hook on issues events
+ * @param {}       payload.merge_requests_events   - - Trigger hook on merge_requests events
+ * @param {}       payload.tag_push_events         - - Trigger hook on push_tag events
+ * @param {}       payload.note_events             - - Trigger hook on note events
+ * @param {}       payload.enable_ssl_verification - - Do SSL verification when triggering the hook
+ */
+export const updateProjectHook = wrap(defs.updateProjectHook);
+
+/**
+ * @function deleteProjectHook
+ * @static
+ * 
+ * @summary Delete project hook
+ * @description
+ *
+ * `DELETE /projects/:id/hooks/:hook_id`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#delete-project-hook|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#delete-project-hook|repo doc}
+ * 
+ * @param {} id      - (required) - The ID or NAMESPACE/PROJECT_NAME of a project
+ * @param {} hook_id - (required) - The ID of hook to delete
+ */
+export const deleteProjectHook = wrap(defs.deleteProjectHook);
+
+/**
+ * @function getProjectRepositoryBranches
+ * @static
+ * 
+ * @summary List branches
+ * @description
+ *
+ * `GET /projects/:id/repository/branches`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#list-branches|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#list-branches|repo doc}
+ * 
+ * @param {} id - (required) - The ID or NAMESPACE/PROJECT_NAME of a project
+ */
+export const getProjectRepositoryBranches = wrap(defs.getProjectRepositoryBranches);
+
+/**
+ * @function getProjectRepositoryBranch
+ * @static
+ * 
+ * @summary List single branch
+ * @description
+ *
+ * `GET /projects/:id/repository/branches/:branch`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#list-single-branch|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#list-single-branch|repo doc}
+ * 
+ * @param {} id     - (required) - The ID or NAMESPACE/PROJECT_NAME of a project
+ * @param {} branch - (required) - The name of the branch.
+ */
+export const getProjectRepositoryBranch = wrap(defs.getProjectRepositoryBranch);
+
+/**
+ * @function updateProjectRepositoryBranchProtect
+ * @static
+ * 
+ * @summary Protect single branch
+ * @description
+ *
+ * `PUT /projects/:id/repository/branches/:branch/protect`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#protect-single-branch|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#protect-single-branch|repo doc}
+ * 
+ * @param {} id     - (required) - The ID or NAMESPACE/PROJECT_NAME of a project
+ * @param {} branch - (required) - The name of the branch.
+ */
+export const updateProjectRepositoryBranchProtect = wrap(defs.updateProjectRepositoryBranchProtect);
+
+/**
+ * @function updateProjectRepositoryBranchUnprotect
+ * @static
+ * 
+ * @summary Unprotect single branch
+ * @description
+ *
+ * `PUT /projects/:id/repository/branches/:branch/unprotect`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#unprotect-single-branch|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#unprotect-single-branch|repo doc}
+ * 
+ * @param {} id     - (required) - The ID or NAMESPACE/PROJECT_NAME of a project
+ * @param {} branch - (required) - The name of the branch.
+ */
+export const updateProjectRepositoryBranchUnprotect = wrap(defs.updateProjectRepositoryBranchUnprotect);
+
+/**
+ * @function addProjectFork
+ * @static
+ * 
+ * @summary Create a forked from/to relation between existing projects.
+ * @description
+ *
+ * `POST /projects/:id/fork/:forked_from_id`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#create-a-forked-fromto-relation-between-existing-projects|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#create-a-forked-fromto-relation-between-existing-projects|repo doc}
+ * 
+ * @param {}          id                      - (required) - The ID of the project
+ * @param {undefined} forked_from_id          - forked_from_id
+ * @param {object}    payload                 - 
+ * @param {}          payload.forked_from_id: - (required) - The ID of the project that was forked from
+ */
+export const addProjectFork = wrap(defs.addProjectFork);
+
+/**
+ * @function deleteProjectFork
+ * @static
+ * 
+ * @summary Delete an existing forked from relationship
+ * @description
+ *
+ * `DELETE /projects/:id/fork`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#delete-an-existing-forked-from-relationship|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#delete-an-existing-forked-from-relationship|repo doc}
+ * 
+ * @param {} id - (required) - The ID of the project
+ */
+export const deleteProjectFork = wrap(defs.deleteProjectFork);
+
+/**
+ * @function getProjectsSearch
+ * @static
+ * 
+ * @summary Search for projects by name
+ * @description
+ *
+ * `GET /projects/search/:query`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/projects.html#search-for-projects-by-name|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/projects.md#search-for-projects-by-name|repo doc}
+ * 
+ * @param {} query - (required) - A string contained in the project name
+ */
+export const getProjectsSearch = wrap(defs.getProjectsSearch);
+
+export default config => ({
+    getProjects: getProjects(config),
+    getProjectsOwned: getProjectsOwned(config),
+    getProjectsStarred: getProjectsStarred(config),
+    getProjectsAll: getProjectsAll(config),
+    getProject: getProject(config),
+    getProjectEvents: getProjectEvents(config),
+    addProject: addProject(config),
+    addProjectsUser: addProjectsUser(config),
+    updateProject: updateProject(config),
+    addProjectsFork: addProjectsFork(config),
+    deleteProject: deleteProject(config),
+    addProjectUpload: addProjectUpload(config),
+    getProjectMembers: getProjectMembers(config),
+    getProjectMember: getProjectMember(config),
+    addProjectMember: addProjectMember(config),
+    updateProjectMember: updateProjectMember(config),
+    deleteProjectMember: deleteProjectMember(config),
+    addProjectShare: addProjectShare(config),
+    getProjectHooks: getProjectHooks(config),
+    getProjectHook: getProjectHook(config),
+    addProjectHook: addProjectHook(config),
+    updateProjectHook: updateProjectHook(config),
+    deleteProjectHook: deleteProjectHook(config),
+    getProjectRepositoryBranches: getProjectRepositoryBranches(config),
+    getProjectRepositoryBranch: getProjectRepositoryBranch(config),
+    updateProjectRepositoryBranchProtect: updateProjectRepositoryBranchProtect(config),
+    updateProjectRepositoryBranchUnprotect: updateProjectRepositoryBranchUnprotect(config),
+    addProjectFork: addProjectFork(config),
+    deleteProjectFork: deleteProjectFork(config),
+    getProjectsSearch: getProjectsSearch(config)
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Mar 27 2016 16:08:44 GMT+0900 (JST) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
