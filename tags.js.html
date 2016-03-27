@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Home - Documentation</title>
+    <title>tags.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -28,43 +28,126 @@
 
 <div id="main">
     
+    <h1 class="page-title">tags.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module gitlab-api.tags
+ */
+
+import { wrap }  from '../wrapper';
+import * as defs from '../definitions/tags';
 
 
+/**
+ * @function getProjectRepositoryTags
+ * @static
+ * 
+ * @summary List project repository tags
+ * @description
+ *
+ * `GET /projects/:id/repository/tags`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/tags.html#list-project-repository-tags|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/tags.md#list-project-repository-tags|repo doc}
+ * 
+ * @param {} id - (required) - The ID of a project
+ */
+export const getProjectRepositoryTags = wrap(defs.getProjectRepositoryTags);
 
+/**
+ * @function addProjectRepositoryTag
+ * @static
+ * 
+ * @summary Create a new tag
+ * @description
+ *
+ * `POST /projects/:id/repository/tags`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/tags.html#create-a-new-tag|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/tags.md#create-a-new-tag|repo doc}
+ * 
+ * @param {}       id                          - (required) - The ID of a project
+ * @param {object} payload                     - 
+ * @param {}       payload.tag_name            - (required) - The name of a tag
+ * @param {}       payload.ref                 - (required) - Create tag using commit SHA, another tag name, or branch name.
+ * @param {}       payload.message             - (optional) - Creates annotated tag.
+ * @param {}       payload.release_description - (optional) - Add release notes to the git tag and store it in the GitLab database.
+ */
+export const addProjectRepositoryTag = wrap(defs.addProjectRepositoryTag);
 
+/**
+ * @function deleteProjectRepositoryTag
+ * @static
+ * 
+ * @summary Delete a tag
+ * @description
+ *
+ * `DELETE /projects/:id/repository/tags/:tag_name`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/tags.html#delete-a-tag|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/tags.md#delete-a-tag|repo doc}
+ * 
+ * @param {} id       - (required) - The ID of a project
+ * @param {} tag_name - (required) - The name of a tag
+ */
+export const deleteProjectRepositoryTag = wrap(defs.deleteProjectRepositoryTag);
 
+/**
+ * @function addProjectRepositoryTagRelease
+ * @static
+ * 
+ * @summary Create a new release
+ * @description
+ *
+ * `POST /projects/:id/repository/tags/:tag_name/release`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/tags.html#create-a-new-release|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/tags.md#create-a-new-release|repo doc}
+ * 
+ * @param {}       id                  - (required) - The ID of a project
+ * @param {}       tag_name            - (required) - The name of a tag
+ * @param {object} payload             - 
+ * @param {}       payload.description - (required) - Release notes with markdown support
+ */
+export const addProjectRepositoryTagRelease = wrap(defs.addProjectRepositoryTagRelease);
 
+/**
+ * @function updateProjectRepositoryTagRelease
+ * @static
+ * 
+ * @summary Update a release
+ * @description
+ *
+ * `PUT /projects/:id/repository/tags/:tag_name/release`
+ *
+ * @see {@link http://doc.gitlab.com/ce/api/tags.html#update-a-release|website doc} -
+ *      {@link https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/api/tags.md#update-a-release|repo doc}
+ * 
+ * @param {}       id                  - (required) - The ID of a project
+ * @param {}       tag_name            - (required) - The name of a tag
+ * @param {object} payload             - 
+ * @param {}       payload.description - (required) - Release notes with markdown support
+ */
+export const updateProjectRepositoryTagRelease = wrap(defs.updateProjectRepositoryTagRelease);
 
-
-
-    
-
-
-    <section class="readme">
-        <article><h1>node-gitlab-client</h1><h2>Usage</h2><pre class="prettyprint source lang-javascript"><code>import labelsApi from 'gitlab-client/labels';
-
-// init labels api client
-const labels = labelsApi({
-    apiBaseUrl: 'https://gitlab.example.com/api/v3',
-    token:      'my_secret_token'
+export default config => ({
+    getProjectRepositoryTags: getProjectRepositoryTags(config),
+    addProjectRepositoryTag: addProjectRepositoryTag(config),
+    deleteProjectRepositoryTag: deleteProjectRepositoryTag(config),
+    addProjectRepositoryTagRelease: addProjectRepositoryTagRelease(config),
+    updateProjectRepositoryTagRelease: updateProjectRepositoryTagRelease(config)
 });
-
-// fetch project 123 labels
-labels.getProjectLabels(123)
-    .then(function (res) {
-        console.log(res.body);
-    })
-    .catch(console.error)
-;</code></pre></article>
+</code></pre>
+        </article>
     </section>
-
-
 
 
 
