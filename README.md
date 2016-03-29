@@ -1,5 +1,8 @@
 # node-gitlab-client
 
+
+[![doc](http://inch-ci.org/github/plouc/node-gitlab-client.svg?branch=master)](http://inch-ci.org/github/plouc/node-gitlab-client)
+
 ## Usage
 
 ```javascript
