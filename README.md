@@ -2,6 +2,8 @@
 
 
 [![Inline docs](http://inch-ci.org/github/plouc/node-gitlab-client.svg?branch=master&style=flat-square)](http://inch-ci.org/github/plouc/node-gitlab-client)
+[![Code climate](https://img.shields.io/codeclimate/github/plouc/node-gitlab-client.svg?style=flat-square)](https://codeclimate.com/github/plouc/node-gitlab-client)
+
 
 ## Usage
 
