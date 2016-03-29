@@ -1,7 +1,7 @@
 # node-gitlab-client
 
 
-[![doc](http://inch-ci.org/github/plouc/node-gitlab-client.svg?branch=master)](http://inch-ci.org/github/plouc/node-gitlab-client)
+[![Inline docs](http://inch-ci.org/github/plouc/node-gitlab-client.svg?branch=master&style=flat-square)](http://inch-ci.org/github/plouc/node-gitlab-client)
 
 ## Usage
 
